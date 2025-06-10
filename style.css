@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+}
+
+/* The second outer most div, contains the "div that contains divs" */
+.divCont {
+    margin-top: 20px;
+    flex: 0 0 860px;
+    width: 860px;
+    outline: auto;
+}
+
+/* The div that contains many div */
+.newDiv {
+    outline: auto;
+    display: flex;
+}
+
+/* Single div */
+.divInsideDiv {
+    height: 10px;
+    width: 10px;
+    background-color:antiquewhite;
+    outline: auto;
+}
+
+.divInsideDiv:hover {
+    background-color: yellow;
+}
+
+.numBtn {
+    font-size: 24px;
+}
