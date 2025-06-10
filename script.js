@@ -35,6 +35,25 @@ function createBox() {
             divInsideDiv.style.width = `${widthDivCont/column}px`;
             divInsideDiv.style.height = `${newDiv.offsetHeight}px`;
             newDiv.appendChild(divInsideDiv);
+
+            divInsideDiv.dataset.opacity = "0";
+
+            // Change to random color
+            divInsideDiv.addEventListener('mouseover', () => {
+                divInsideDiv.style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)},
+                ${Math.floor(Math.random() * 255)},
+                ${Math.floor(Math.random() * 255)}, 1)`;
+            });
+
+            // Change back to black
+            divInsideDiv.addEventListener('mouseleave', () => {
+                let currentOpacity = parseFloat(divInsideDiv.dataset.opacity);
+                if (currentOpacity < 1) {
+                    currentOpacity = Math.min(currentOpacity + 0.1, 1);
+                    divInsideDiv.dataset.opacity = currentOpacity.toString();
+                }
+                divInsideDiv.style.backgroundColor = `rgba(0,0,0,${currentOpacity})`;
+            });
         }
     }
 }

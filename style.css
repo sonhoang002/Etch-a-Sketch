@@ -17,21 +17,22 @@ body {
 
 /* The div that contains many div */
 .newDiv {
-    outline: auto;
+    /* outline: auto; */
     display: flex;
 }
 
 /* Single div */
 .divInsideDiv {
+    box-sizing: border-box;
     height: 10px;
     width: 10px;
-    background-color:antiquewhite;
+    background-color: rgb(0,0,0 /0);
     outline: auto;
 }
 
-.divInsideDiv:hover {
-    background-color: yellow;
-}
+/* .divInsideDiv:hover {
+    background-color:
+} */
 
 .numBtn {
     font-size: 24px;
